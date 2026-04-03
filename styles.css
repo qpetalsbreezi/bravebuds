@@ -267,6 +267,11 @@ body {
   font-weight: 400;
 }
 
+.hero-lede strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
 .cta {
   display: inline-block;
   padding: 0.85rem 1.65rem;
