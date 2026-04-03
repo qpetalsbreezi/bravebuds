@@ -1,39 +1,256 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Brave Buds — Free kids’ self-defense classes</title>
+    <title>Brave Buds</title>
     <meta
       name="description"
       content="Fun, free classes at libraries, parks, and community centers—building confidence and safety for every child."
     />
+    <meta name="theme-color" content="#ebebb9" />
+    <meta property="og:url" content="https://bravebuds.org/" />
+    <meta property="og:site_name" content="Brave Buds" />
+    <meta property="og:title" content="Brave Buds" />
+    <meta
+      property="og:description"
+      content="Fun, free classes at libraries, parks, and community centers—building confidence and safety for every child."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://img1.wsimg.com/isteam/ip/36ee7dbf-4414-41a4-bb21-dd4f91e3347c/HERO.jpg"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Brave Buds" />
+    <meta
+      name="twitter:description"
+      content="Empowering Kids with Self-Defense Skills"
+    />
+    <meta
+      name="twitter:image"
+      content="https://img1.wsimg.com/isteam/ip/36ee7dbf-4414-41a4-bb21-dd4f91e3347c/HERO.jpg"
+    />
+    <meta name="twitter:image:alt" content="Brave Buds" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&family=Raleway:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header class="site-header">
-      <p class="logo">Brave Buds</p>
+      <div class="header-inner">
+        <a class="logo" href="#top">Brave Buds</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span class="visually-hidden">Menu</span>
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </label>
+        <nav class="nav" aria-label="Primary">
+          <a href="#top">Home</a>
+          <a href="#faq">FAQ</a>
+          <details class="nav-more">
+            <summary>More</summary>
+            <ul class="nav-more-list">
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#programs">Our Programs</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </details>
+        </nav>
+      </div>
     </header>
 
-    <main>
-      <section class="hero">
-        <h1>Empowering kids with self-defense skills</h1>
-        <p class="lede">
-          Fun, free classes at libraries, parks, and community centers—building
-          confidence and safety for every child.
-        </p>
-        <a
-          class="cta"
-          href="https://forms.gle/Hr35HanKFkzdAx5j6"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Register for a class</a
-        >
+    <main id="main">
+      <section id="top" class="hero">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-inner">
+          <h1>Empowering Kids with Self-Defense Skills</h1>
+          <p class="hero-lede">
+            Fun, free classes at libraries, parks, and community centers—building
+            confidence and safety for every child.
+          </p>
+          <a
+            class="cta"
+            href="https://forms.gle/Hr35HanKFkzdAx5j6"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Click here to register</a
+          >
+        </div>
+      </section>
+
+      <section id="about" class="section section-about">
+        <div class="container narrow">
+          <h2 class="section-title">About Us</h2>
+          <h3 class="subsection-title">Our Mission</h3>
+          <p>
+            At Brave Buds, we empower children across the SF Bay Area with essential
+            self-defense skills. Our mission is to help kids build confidence and
+            develop personal safety awareness through engaging, hands-on training. We
+            offer programs at local libraries, public parks, and community centers,
+            making self-defense education accessible to all.
+          </p>
+          <h3 class="subsection-title">Founder&rsquo;s story</h3>
+          <p>
+            Brave Buds was founded by Saanvi Sharma, a fourth-degree black belt with 11
+            years of Taekwondo experience. Over the past two years, she has trained
+            more than 300 children across the SF Bay Area in self-defense. Her passion
+            for teaching stems from a deep understanding of how self-defense builds
+            confidence, resilience, and real-world safety skills that last a lifetime.
+          </p>
+        </div>
+      </section>
+
+      <section id="programs" class="section section-programs">
+        <div class="container">
+          <h2 class="section-title">Our Programs</h2>
+          <p class="intro">
+            We offer a structured 5-week curriculum designed to introduce children to
+            the fundamentals of self-defense. Each session teaches essential
+            techniques, from basic stances and strikes to situational awareness and
+            real-life applications. Our classes are interactive, engaging, and tailored
+            to all skill levels, ensuring every child feels confident and prepared.
+          </p>
+
+          <h3 class="join-title">Join us</h3>
+          <p class="join-lede">
+            Our self-defense classes are held weekly at libraries, parks, and community
+            centers throughout the SF Bay Area. Families interested in enrolling can
+            sign up online, and all registered participants will receive class details via
+            email. Join us today and take the first step toward self-confidence, safety,
+            and empowerment.
+          </p>
+
+          <h3 class="program-name">5-Weeks Self-Defense Program</h3>
+          <ol class="weeks">
+            <li class="week-card">
+              <h4>First Week — Building a Strong Foundation</h4>
+              <p class="event-details">Event Details</p>
+              <ul>
+                <li>Understanding personal safety and awareness</li>
+                <li>Learning basic stances, movement, and positioning</li>
+              </ul>
+            </li>
+            <li class="week-card">
+              <h4>Second Week — Striking for Self-Defense</h4>
+              <p class="event-details">Event Details</p>
+              <ul>
+                <li>Mastering powerful punches, palm strikes, and knee strikes</li>
+                <li>Targeting vulnerable areas for effective protection</li>
+              </ul>
+            </li>
+            <li class="week-card">
+              <h4>Third Week — Kicks &amp; Evasive Techniques</h4>
+              <p class="event-details">Event Details</p>
+              <ul>
+                <li>Practicing front, side, and push kicks</li>
+                <li>Learning how to move, pivot, and create distance</li>
+              </ul>
+            </li>
+            <li class="week-card">
+              <h4>Fourth Week — Escaping Grabs &amp; Defending Yourself</h4>
+              <p class="event-details">Event Details</p>
+              <ul>
+                <li>Breaking free from wrist, shoulder, and body grabs</li>
+                <li>Using leverage and quick reactions to gain control</li>
+              </ul>
+            </li>
+            <li class="week-card">
+              <h4>Fifth Week — Real-World Scenarios &amp; Program Wrap-Up</h4>
+              <p class="event-details">Event Details</p>
+              <ul>
+                <li>Applying all skills in safe, simulated situations</li>
+                <li>Confidence-building exercises &amp; final review</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="faq" class="section section-faq">
+        <div class="container narrow">
+          <h2 class="section-title">FAQ</h2>
+          <dl class="faq-list">
+            <dt>Are classes free?</dt>
+            <dd>
+              The site describes fun, free classes at libraries, parks, and community
+              centers.
+            </dd>
+            <dt>Where do classes happen?</dt>
+            <dd>
+              Libraries, parks, and community centers throughout the SF Bay Area.
+            </dd>
+            <dt>How do I sign up?</dt>
+            <dd>
+              Families can sign up online; registered participants receive class details
+              via email. Use
+              <a href="https://forms.gle/Hr35HanKFkzdAx5j6">the registration form</a>.
+            </dd>
+            <dt>Who leads Brave Buds?</dt>
+            <dd>
+              Saanvi Sharma, a fourth-degree black belt with 11 years of Taekwondo
+              experience.
+            </dd>
+          </dl>
+        </div>
+      </section>
+
+      <section id="testimonials" class="section section-testimonials">
+        <div class="container">
+          <h2 class="section-title">Testimonials</h2>
+          <div class="quotes">
+            <blockquote class="quote">
+              <p>
+                Thank you for your patience and understanding, Saanvi. We are truly
+                touched by you. Through your classes, Sodam&rsquo;s Taekwondo skills,
+                concentration, and ability to follow directions have greatly improved.
+              </p>
+              <footer>From Sodam&rsquo;s mom</footer>
+            </blockquote>
+            <blockquote class="quote">
+              <p>
+                Saanvi, you are the best teacher. Alice likes you so much, and we
+                appreciate your excellent work 🥇
+              </p>
+              <footer>From ALICE&rsquo;s MOM</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-contact">
+        <div class="container narrow">
+          <h2 class="section-title">Contact us</h2>
+          <p>
+            Be the first to hear about upcoming class registration, special events, and
+            more. If you have any questions about the opportunities available to you in
+            our program, send us a message. We will get back to you as soon as possible.
+          </p>
+          <a
+            class="cta cta-secondary"
+            href="https://forms.gle/Hr35HanKFkzdAx5j6"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Sign Up</a
+          >
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Brave Buds</p>
+      <p>Copyright &copy; <span id="year"></span> Brave Buds - All Rights Reserved.</p>
     </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
