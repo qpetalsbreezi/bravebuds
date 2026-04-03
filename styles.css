@@ -49,7 +49,7 @@ body {
   top: 1rem;
 }
 
-/* —— Header —— */
+/* Header */
 .site-header {
   position: sticky;
   top: 0;
@@ -222,7 +222,7 @@ body {
   }
 }
 
-/* —— Hero —— */
+/* Hero */
 .hero {
   position: relative;
   min-height: min(78vh, 640px);
@@ -296,7 +296,7 @@ body {
   margin-top: 0.5rem;
 }
 
-/* —— Sections —— */
+/* Sections */
 .section {
   padding: 3.25rem 1.25rem;
 }
@@ -349,7 +349,7 @@ body {
   max-width: 960px;
 }
 
-/* —— About (two columns, circular photos) —— */
+/* About (two columns, circular photos) */
 .section-about {
   background: #fff;
 }
@@ -442,8 +442,16 @@ body {
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 1.25rem;
-  margin: 0 0 1rem;
+  margin: 0 0 0.75rem;
   color: var(--text);
+}
+
+.program-outcome {
+  margin: 0 0 1.75rem;
+  max-width: 40rem;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--text-muted);
 }
 
 .section-contact p {
@@ -451,54 +459,149 @@ body {
   color: var(--text-muted);
 }
 
-.weeks {
+.weeks-grid {
   margin: 1.5rem 0 0;
-  padding: 0;
-  list-style: none;
   display: grid;
   gap: 1rem;
+  align-items: stretch;
 }
 
 @media (min-width: 640px) {
-  .weeks {
-    grid-template-columns: repeat(2, 1fr);
+  .weeks-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
+/* List items participate in parent grid (valid HTML: ol only wraps li) */
+.weeks {
+  display: contents;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .week-card {
-  background: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  text-align: left;
   border-radius: 12px;
-  padding: 1.25rem 1.35rem;
-  border: 1px solid rgba(42, 41, 36, 0.1);
+  padding: 1.25rem 1.35rem 1.25rem 1.15rem;
+  border: 1px solid rgba(22, 21, 19, 0.1);
   box-shadow: var(--shadow);
+  border-left-width: 4px;
+  border-left-style: solid;
+}
+
+.week-card:nth-child(5n + 1) {
+  background: #fff;
+  border-left-color: #1a4d36;
+}
+
+.week-card:nth-child(5n + 2) {
+  background: #f9f8f3;
+  border-left-color: #256b4c;
+}
+
+.week-card:nth-child(5n + 3) {
+  background: #fff;
+  border-left-color: #2f7d59;
+}
+
+.week-card:nth-child(5n + 4) {
+  background: #f9f8f3;
+  border-left-color: #256b4c;
+}
+
+.week-card:nth-child(5n + 5) {
+  background: #fff;
+  border-left-color: #1a4d36;
+}
+
+.week-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.75rem 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.week-badge {
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #fff;
+  background: var(--accent);
+  box-shadow: 0 2px 8px rgba(26, 77, 54, 0.25);
 }
 
 .week-card h4 {
-  margin: 0 0 0.35rem;
+  margin: 0;
+  flex: 1;
+  min-width: 0;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.35;
   color: var(--text);
-}
-
-.event-details {
-  margin: 0 0 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--accent);
+  text-align: left;
 }
 
 .week-card ul {
+  flex: 1 1 auto;
   margin: 0;
-  padding-left: 1.15rem;
+  padding-left: 1.35rem;
+  text-align: left;
+  list-style-type: disc;
+  list-style-position: outside;
   color: var(--text-muted);
   font-size: 0.95rem;
 }
 
+.week-card ul li::marker {
+  color: var(--accent);
+}
+
 .week-card li + li {
-  margin-top: 0.35rem;
+  margin-top: 0.4rem;
+}
+
+.week-cta-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  min-height: 0;
+  text-align: left;
+  border-radius: 12px;
+  padding: 1.35rem 1.35rem 1.35rem 1.15rem;
+  border: 1px solid rgba(22, 21, 19, 0.1);
+  box-shadow: var(--shadow);
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-left-color: var(--accent);
+  background: #f9f8f3;
+}
+
+.week-cta-lede {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.week-cta-card .cta-block {
+  align-self: flex-start;
 }
 
 /* FAQ */
