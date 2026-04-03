@@ -1,10 +1,13 @@
 :root {
   --cream: #ebebb9;
   --cream-dark: #d4d4a8;
-  --text: #2a2924;
-  --text-muted: #4a483f;
-  --accent: #3d5c4a;
-  --accent-hover: #2f4839;
+  /* Primary text: ~15:1 on white, strong on cream-tint sections */
+  --text: #161513;
+  /* Secondary body: ≥4.5:1 on white and tinted backgrounds */
+  --text-muted: #3a3833;
+  /* Links / buttons: darker green for contrast (esp. small text & WCAG AA) */
+  --accent: #1a4d36;
+  --accent-hover: #143d2b;
   --white: #fdfdf8;
   --shadow: 0 4px 24px rgba(42, 41, 36, 0.08);
   --font-display: "Sacramento", cursive;
@@ -233,12 +236,13 @@ body {
 .hero-bg {
   position: absolute;
   inset: 0;
+  /* Light scrim: show the photo; text relies on dark type + subtle shadow */
   background:
     linear-gradient(
       180deg,
-      rgba(253, 253, 248, 0.75) 0%,
-      rgba(235, 235, 185, 0.55) 45%,
-      rgba(253, 253, 248, 0.9) 100%
+      rgba(253, 253, 248, 0.72) 0%,
+      rgba(238, 236, 210, 0.58) 45%,
+      rgba(253, 253, 248, 0.82) 100%
     ),
     url("https://img1.wsimg.com/isteam/ip/36ee7dbf-4414-41a4-bb21-dd4f91e3347c/HERO.jpg")
       center / cover no-repeat;
@@ -258,6 +262,8 @@ body {
   font-size: clamp(1.65rem, 4.5vw, 2.35rem);
   line-height: 1.2;
   letter-spacing: -0.02em;
+  color: var(--text);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
 }
 
 .hero-lede {
@@ -267,16 +273,11 @@ body {
   font-weight: 400;
 }
 
-.hero-lede strong {
-  color: var(--text);
-  font-weight: 700;
-}
-
 .cta {
   display: inline-block;
   padding: 0.85rem 1.65rem;
   background: var(--accent);
-  color: #fff !important;
+  color: #ffffff !important;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
@@ -371,7 +372,7 @@ body {
   flex: 1;
   max-width: 8rem;
   height: 1px;
-  background: rgba(42, 41, 36, 0.22);
+  background: rgba(22, 21, 19, 0.35);
 }
 
 .about-page-title-text {
@@ -434,6 +435,7 @@ body {
   font-size: clamp(2rem, 5vw, 2.75rem);
   font-weight: 400;
   line-height: 1.15;
+  color: var(--text);
 }
 
 .program-name {
@@ -441,6 +443,7 @@ body {
   font-weight: 700;
   font-size: 1.25rem;
   margin: 0 0 1rem;
+  color: var(--text);
 }
 
 .section-contact p {
@@ -475,6 +478,7 @@ body {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.35;
+  color: var(--text);
 }
 
 .event-details {
@@ -520,6 +524,13 @@ body {
 .faq-list a {
   color: var(--accent);
   font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.faq-list a:hover,
+.faq-list a:focus-visible {
+  color: var(--accent-hover);
 }
 
 /* Testimonials */
