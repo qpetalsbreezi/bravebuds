@@ -492,55 +492,31 @@ body {
   border-radius: 12px;
   padding: 1.25rem 1.35rem 1.25rem 1.15rem;
   border: 1px solid rgba(22, 21, 19, 0.1);
-  box-shadow: var(--shadow);
-  border-left-width: 4px;
-  border-left-style: solid;
   background: var(--surface-card);
-}
-
-.week-card:nth-child(5n + 1) {
-  border-left-color: #1a4d36;
-}
-
-.week-card:nth-child(5n + 2) {
-  border-left-color: #256b4c;
-}
-
-.week-card:nth-child(5n + 3) {
-  border-left-color: #2f7d59;
-}
-
-.week-card:nth-child(5n + 4) {
-  border-left-color: #256b4c;
-}
-
-.week-card:nth-child(5n + 5) {
-  border-left-color: #1a4d36;
 }
 
 .week-card-top {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 0.75rem 0.85rem;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  gap: 0.35rem;
   margin-bottom: 0.75rem;
 }
 
 .week-badge {
   flex-shrink: 0;
-  width: 2.75rem;
-  height: 2.75rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: baseline;
+  font-size: 1rem;
   font-weight: 800;
-  line-height: 1;
-  color: #fff;
-  background: var(--accent);
-  box-shadow: 0 2px 8px rgba(26, 77, 54, 0.25);
+  line-height: 1.35;
+  color: var(--text);
+  background: transparent;
+}
+
+.week-badge::after {
+  content: ".";
+  font-weight: 800;
 }
 
 .week-card h4 {
@@ -566,40 +542,28 @@ body {
 }
 
 .week-card ul li::marker {
-  color: var(--accent);
+  color: rgba(22, 21, 19, 0.35);
 }
 
 .week-card li + li {
   margin-top: 0.4rem;
 }
 
-.week-cta-card {
+/* Below week cards — no box */
+.week-cta {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  min-height: 0;
-  text-align: left;
-  border-radius: 12px;
-  padding: 1.35rem 1.35rem 1.35rem 1.15rem;
-  border: 1px solid rgba(22, 21, 19, 0.1);
-  box-shadow: var(--shadow);
-  border-left-width: 4px;
-  border-left-style: solid;
-  border-left-color: var(--accent);
-  background: var(--surface-card);
+  align-items: center;
+  text-align: center;
+  margin-top: 1.75rem;
+  padding: 0;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.week-cta-lede {
-  margin: 0 0 1rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: 600;
-  color: var(--text);
-}
-
-.week-cta-card .cta-block {
-  align-self: flex-start;
+.week-cta .cta-block {
+  align-self: center;
 }
 
 /* FAQ */
@@ -656,7 +620,7 @@ body {
   padding: 1.35rem 1.5rem;
   background: var(--surface-card);
   border-radius: 12px;
-  border-left: 4px solid var(--accent);
+  border: 1px solid rgba(22, 21, 19, 0.1);
   box-shadow: var(--shadow);
 }
 
