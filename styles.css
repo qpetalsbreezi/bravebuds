@@ -510,13 +510,19 @@ body {
 }
 
 .about-photo {
-  width: min(280px, 72vw);
-  height: min(280px, 72vw);
+  display: block;
+  width: min(280px, 85vw);
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 14px;
   border: 3px solid #d8d4b0;
   box-shadow: 0 2px 12px rgba(42, 41, 36, 0.06);
-  vertical-align: middle;
+}
+
+/* Illustrations read better in a square frame */
+.about-photo.about-photo-graphic {
+  aspect-ratio: 1;
+  object-fit: contain;
 }
 
 .about-col-title {
@@ -619,12 +625,15 @@ body {
   color: var(--text-muted);
 }
 
-.about-story-founder-photo {
+/* Founder headshot stays circular; other .about-photo images are rounded rectangles */
+.about-photo.about-story-founder-photo {
   flex-shrink: 0;
   display: block;
   margin: 0;
-  width: min(140px, 40vw);
-  height: min(140px, 40vw);
+  width: min(130px, 36vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 @media (max-width: 520px) {
