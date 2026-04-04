@@ -645,6 +645,13 @@ body {
   color: var(--text-muted);
 }
 
+.about-story-founder-cred {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
 /* Founder headshot stays circular; other .about-photo images are rounded rectangles */
 .about-photo.about-story-founder-photo {
   flex-shrink: 0;
