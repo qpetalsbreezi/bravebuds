@@ -466,29 +466,6 @@ body {
 
 /* About (two columns, circular photos) — surface from body */
 
-.about-page-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin: 0 0 2.75rem;
-}
-
-.about-page-title-line {
-  flex: 1;
-  max-width: 8rem;
-  height: 1px;
-  background: rgba(22, 21, 19, 0.35);
-}
-
-.about-page-title-text {
-  flex-shrink: 0;
-}
-
-.about-page-title .section-title {
-  margin: 0;
-}
-
 .about-grid {
   display: grid;
   gap: 2.75rem 3rem;
@@ -687,6 +664,34 @@ body {
   text-align: center;
 }
 
+h2.section-title.about-page-title {
+  margin: 0 0 2.75rem;
+}
+
+/* Our Story only: lines flanking the title */
+.about-page-title--decorated {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0 0 2.75rem;
+}
+
+.about-page-title--decorated .about-page-title-line {
+  flex: 1;
+  max-width: 8rem;
+  height: 1px;
+  background: rgba(22, 21, 19, 0.35);
+}
+
+.about-page-title--decorated .about-page-title-text {
+  flex-shrink: 0;
+}
+
+.about-page-title--decorated .section-title {
+  margin: 0;
+}
+
 .curriculum-intro-media {
   display: flex;
   justify-content: center;
@@ -778,20 +783,16 @@ body {
 .week-card ul {
   flex: 1 1 auto;
   margin: 0;
-  padding-left: 1.35rem;
+  padding: 0;
+  list-style: none;
   text-align: left;
-  list-style-type: disc;
-  list-style-position: outside;
   color: var(--text-muted);
   font-size: 0.95rem;
+  line-height: 1.55;
 }
 
-.week-card ul li::marker {
-  color: rgba(22, 21, 19, 0.35);
-}
-
-.week-card li + li {
-  margin-top: 0.4rem;
+.week-card ul li + li {
+  margin-top: 0.55rem;
 }
 
 /* Below week cards — no box */
