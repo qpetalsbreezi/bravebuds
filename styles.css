@@ -418,12 +418,6 @@ body {
   padding: 3.25rem 1.25rem;
 }
 
-.section-programs {
-  padding: 0;
-}
-
-/* programs-intro: inherits --surface-base from body */
-
 /* Curriculum + testimonials + partners: same band (calmer than mixed tints) */
 /* Curriculum, testimonials, partners: same warm gradient (via --gradient-warm-section) */
 .section-curriculum {
@@ -549,6 +543,16 @@ body {
   text-align: center;
 }
 
+.curriculum-intro-media {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 1.25rem;
+}
+
+.curriculum-intro-media .about-figure {
+  margin: 0;
+}
+
 .program-outcome {
   margin: 0 auto 1.75rem;
   max-width: 40rem;
@@ -556,11 +560,6 @@ body {
   line-height: 1.65;
   color: var(--text-muted);
   text-align: center;
-}
-
-.section-contact p {
-  margin: 0 0 1rem;
-  color: var(--text-muted);
 }
 
 .weeks-grid {
@@ -810,7 +809,25 @@ body {
 }
 
 .section-contact p {
+  margin: 0 0 1rem;
+  color: var(--text-muted);
   text-align: left;
+}
+
+.contact-col-copy {
+  text-align: left;
+}
+
+.contact-tagline {
+  margin-bottom: 1.25rem;
+}
+
+.contact-cta {
+  margin-top: 0.25rem;
+}
+
+.contact-join-grid {
+  margin-top: 0.25rem;
 }
 
 /* Footer */
