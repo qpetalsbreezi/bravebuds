@@ -266,7 +266,7 @@ body {
 .hero-inner {
   position: relative;
   z-index: 1;
-  max-width: 40rem;
+  max-width: 44rem;
 }
 
 .hero h1 {
@@ -281,10 +281,48 @@ body {
 }
 
 .hero-lede {
-  margin: 0 0 1.75rem;
+  margin: 0 0 1.25rem;
   font-size: 1.08rem;
   color: var(--text-muted);
   font-weight: 400;
+}
+
+.hero-stats {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem 1.5rem;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  min-width: min(100%, 9.5rem);
+  max-width: 12rem;
+}
+
+.hero-stat-value {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: clamp(1.35rem, 3.8vw, 1.75rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.hero-stat-label {
+  font-size: 0.875rem;
+  line-height: 1.35;
+  font-weight: 600;
+  color: var(--text-muted);
 }
 
 .cta {
