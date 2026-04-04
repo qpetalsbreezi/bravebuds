@@ -692,8 +692,9 @@ h2.section-title.about-page-title {
   margin: 0;
 }
 
-/* Program intro: image left, copy right (stacks on narrow viewports) */
-.curriculum-intro {
+/* Program + Join: image left, copy right (stacks on narrow viewports) */
+.curriculum-intro,
+.join-intro {
   display: grid;
   gap: 1.5rem;
   align-items: start;
@@ -701,14 +702,16 @@ h2.section-title.about-page-title {
 }
 
 @media (min-width: 680px) {
-  .curriculum-intro {
+  .curriculum-intro,
+  .join-intro {
     /* Image and copy each half of row (within section container) */
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 1.75rem 2.25rem;
   }
 }
 
-.curriculum-intro-media {
+.curriculum-intro-media,
+.join-intro-media {
   display: flex;
   justify-content: center;
   margin: 0;
@@ -716,24 +719,29 @@ h2.section-title.about-page-title {
 }
 
 @media (min-width: 680px) {
-  .curriculum-intro-media {
+  .curriculum-intro-media,
+  .join-intro-media {
     justify-content: flex-start;
   }
 }
 
-.curriculum-intro-media .about-figure {
+.curriculum-intro-media .about-figure,
+.join-intro-media .about-figure {
   margin: 0;
   width: 100%;
 }
 
-.curriculum-intro-media .about-photo {
+.curriculum-intro-media .about-photo,
+.join-intro-media .about-photo {
   width: 100%;
   height: auto;
 }
 
 @media (max-width: 679px) {
   .curriculum-intro-media .about-figure,
-  .curriculum-intro-media .about-photo {
+  .curriculum-intro-media .about-photo,
+  .join-intro-media .about-figure,
+  .join-intro-media .about-photo {
     max-width: min(92vw, 380px);
   }
 }
@@ -747,7 +755,8 @@ h2.section-title.about-page-title {
   text-align: center;
 }
 
-.curriculum-intro-copy {
+.curriculum-intro-copy,
+.join-intro-copy {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -787,6 +796,41 @@ h2.section-title.about-page-title {
   .curriculum-intro-copy .week-cta--intro {
     align-items: center;
     text-align: center;
+  }
+}
+
+.join-intro-copy .join-intro-text p {
+  margin: 0 0 1rem;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.join-intro-copy .join-intro-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 679px) {
+  .join-intro-copy .join-intro-text,
+  .join-intro-copy .join-intro-text p {
+    text-align: center;
+  }
+}
+
+@media (min-width: 680px) {
+  .join-intro-copy .join-intro-text p {
+    text-align: left;
+  }
+}
+
+.join-intro-copy .contact-cta {
+  margin: 0;
+  align-self: center;
+}
+
+@media (min-width: 680px) {
+  .join-intro-copy .contact-cta {
+    align-self: flex-start;
   }
 }
 
@@ -1047,10 +1091,6 @@ h2.section-title.about-page-title {
 }
 
 .contact-cta {
-  margin-top: 0.25rem;
-}
-
-.contact-join-grid {
   margin-top: 0.25rem;
 }
 
