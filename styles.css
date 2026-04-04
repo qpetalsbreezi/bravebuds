@@ -692,14 +692,50 @@ h2.section-title.about-page-title {
   margin: 0;
 }
 
+/* Program intro: image left, copy right (stacks on narrow viewports) */
+.curriculum-intro {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+  margin: 0 0 1.75rem;
+}
+
+@media (min-width: 680px) {
+  .curriculum-intro {
+    /* Image and copy each half of row (within section container) */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 1.75rem 2.25rem;
+  }
+}
+
 .curriculum-intro-media {
   display: flex;
   justify-content: center;
-  margin: 0 0 1.25rem;
+  margin: 0;
+  width: 100%;
+}
+
+@media (min-width: 680px) {
+  .curriculum-intro-media {
+    justify-content: flex-start;
+  }
 }
 
 .curriculum-intro-media .about-figure {
   margin: 0;
+  width: 100%;
+}
+
+.curriculum-intro-media .about-photo {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 679px) {
+  .curriculum-intro-media .about-figure,
+  .curriculum-intro-media .about-photo {
+    max-width: min(92vw, 380px);
+  }
 }
 
 .program-outcome {
@@ -709,6 +745,49 @@ h2.section-title.about-page-title {
   line-height: 1.65;
   color: var(--text-muted);
   text-align: center;
+}
+
+.curriculum-intro-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+.curriculum-intro .program-outcome {
+  margin: 0;
+  max-width: none;
+}
+
+@media (min-width: 680px) {
+  .curriculum-intro .program-outcome {
+    text-align: left;
+    padding-top: 0.1rem;
+  }
+}
+
+/* Sign up under intro copy (not below week cards) */
+.curriculum-intro-copy .week-cta--intro {
+  margin: 0.75rem 0 0;
+  max-width: none;
+}
+
+@media (min-width: 680px) {
+  .curriculum-intro-copy .week-cta--intro {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .curriculum-intro-copy .week-cta--intro .cta-block {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 679px) {
+  .curriculum-intro-copy .week-cta--intro {
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .weeks-grid {
